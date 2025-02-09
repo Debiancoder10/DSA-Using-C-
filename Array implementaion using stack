@@ -1,0 +1,88 @@
+ Online C++ compiler to run C++ program online
+#include iostream
+using namespace std;
+int maxsize = 5;
+int stack[5];
+int top=-1;
+int IsFull()
+{
+    if(top==(maxsize-1))
+    {
+        return 1;
+    }
+    else 
+    {
+        return 0;
+    }
+}
+int IsEmpty()
+{
+    if(top==-1)
+    {
+        return 1;
+        
+    }
+    else 
+    return 0;
+}
+void Push()
+{
+    int data;
+  
+    if(!IsFull())
+    {
+          coutenter the dataendl;
+    cindata;
+    top++;
+    stack[top]=data;
+    
+    }
+    
+}
+void Pop()
+{
+    int temp;
+    if(!IsEmpty())
+    {
+        temp=stack[top];
+        top--;
+        coutthe poped data istempendl;
+    }
+}
+void display()
+{
+    coutstack[top]endl;
+}
+
+int main() {
+    int a;
+    while(1){
+   coutPress 1 for Push Operationendl;
+   coutPress 2 for Pop Operationendl;
+   coutPress 3 To Display Top of The stackendl;
+   coutPress 4 to terminate programendl;
+    cina;
+    if(a==1)
+    {
+        Push();
+    }
+    if(a==2)
+    {
+        Pop();
+        
+    }
+     if(a==4)
+    {
+        coutThe program is terminatedendl;
+       break;
+        
+    }
+    if(a==4)
+    {
+        display();
+    }
+    }
+    
+
+    return 0;
+}
